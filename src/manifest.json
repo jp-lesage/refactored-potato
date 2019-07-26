@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Spiceworks Posts Hider",
+  "description": "Hides posts of your choice from Spiceworks.",
+  "version": "0.1",
+  "version_name": "0.1-alpha",
+  "author": "Jean-Philippe Lesage",
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://community.spiceworks.com/*"
+      ],
+      "js": ["jquery-3.4.1.min.js", "content.js"]
+    }
+  ]
+}
